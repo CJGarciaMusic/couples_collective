@@ -178,43 +178,15 @@ body {
 
 #section-three {
     width: 100%;
-    height: 800px;
-    /* Adjust the height as per your requirement */
-    background-color: #d0d0d0;
+    background-color: #e4e4e4;
 }
 
-#myVideo {
+#section-four {
     width: 100%;
+    background-color: #fff;
 }
 
-/* .content {
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
+#footer {
     width: 100%;
-    padding: 20px;
-} */
-
-/* Style the button used to pause/play the video */
-#myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-}
-
-#myBtn:hover {
-    background: #ddd;
-    color: black;
-}
-
-#bloop {
-    margin-top: 100%;
-    z-index: 2;
-    padding: 50px;
-    background-color: #f1f1f1;
-    color: #333;
-    font-family: Arial, sans-serif;
+    background-color: var(--standard-green);
 }
