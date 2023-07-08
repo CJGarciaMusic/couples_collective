@@ -27,7 +27,8 @@ body {
     font-family: var(--font-work-sans);
 }
 
-.fill_button {
+.fill-button {
+    white-space: nowrap;
     background-color: var(--standard-green);
     border: none;
     color: white;
@@ -41,11 +42,45 @@ body {
     border-radius: var(--standard-radius);
 }
 
-.outline_button {
+.outline-button {
+    white-space: nowrap;
     background-color: transparent;
     border: solid 2px;
     border-color: var(--standard-green);
     color: var(--standard-green);
+    padding: 9px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--font-work-sans);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: var(--standard-radius);
+}
+
+.footer-fill-button {
+    margin: 10px 0px;
+    white-space: nowrap;
+    background-color: #FFF;
+    border: none;
+    color: var(--standard-green);
+    padding: 9px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--font-work-sans);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: var(--standard-radius);
+}
+
+.footer-outline-button {
+    margin: 10px 0px;
+    white-space: nowrap;
+    background-color: transparent;
+    border: solid 2px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
     padding: 9px 26px;
     text-align: center;
     text-decoration: none;
@@ -264,6 +299,55 @@ body {
 }
 
 #footer {
-    width: 100%;
+    position: relative;
     background-color: var(--standard-green);
+    padding: 40px;
+}
+
+#footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#footer .flex-item {
+    max-width: 20vw;
+}
+
+#footer .title {
+    font-family: var(--font-libre-serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 20px 0;
+}
+
+#footer .description {
+    font-family: var(--font-work-sans);
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#footer .nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+#footer .nav-link {
+    flex: 1;
+}
+
+#footer .logo-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
