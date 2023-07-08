@@ -17,6 +17,7 @@
     --font-libre-serif: 'Libre Baskerville', serif;
     --standard-green: #4e8d6b;
     --standard-radius: 27px;
+    --standard-gray: #3F4447;
 }
 
 body {
@@ -130,17 +131,18 @@ body {
 }
 
 #section-two {
-    width: 100%;
+    position: relative;
 }
 
 #section-two .flex-content {
-    max-width: 33vw;
+    max-width: 25vw;
 }
 
 #section-two .flex-container {
     display: flex;
-    column-gap: 20px;
+    column-gap: 40px;
     margin: 40px 20px;
+    justify-content: space-between;
 }
 
 #section-two .title {
@@ -157,9 +159,8 @@ body {
 }
 
 #section-two img {
-    flex: 1;
     display: block;
-    width: 100%;
+    width: 25vw;
     height: auto;
     border-radius: var(--standard-radius);
 }
@@ -177,13 +178,89 @@ body {
 }
 
 #section-three {
-    width: 100%;
+    position: relative;
     background-color: #e4e4e4;
+    padding: 20px;
+}
+
+#section-three .cover-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 75%; */
+}
+
+#section-three .title {
+    text-align: center;
+    font-family: var(--font-libre-serif);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--standard-gray);
+    padding: 20px;
+}
+
+#section-three .flex-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#section-three .flex-item {
+    max-width: 500px;
+    padding: 20px;
+}
+
+#section-three .svg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    column-gap: 2px;
+}
+
+#section-three .review {
+    text-align: start;
+    margin-top: 10px;
+}
+
+#section-three .yelp {
+    text-align: center;
+}
+
+#section-three a {
+    color: var(--standard-gray);
+    text-decoration: none;
+    font-size: 20px;
 }
 
 #section-four {
-    width: 100%;
     background-color: #fff;
+    padding: 20px;
+}
+
+#section-four .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+#section-four .flex-item {
+    padding: 20px;
+    max-width: 25vw;
+}
+
+#section-four .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--standard-green);
+}
+
+#section-four .description {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
 }
 
 #footer {
