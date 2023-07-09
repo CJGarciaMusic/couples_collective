@@ -16,8 +16,10 @@
     --font-work-sans: 'Work Sans', sans-serif;
     --font-libre-serif: 'Libre Baskerville', serif;
     --standard-green: #4e8d6b;
-    --standard-radius: 27px;
     --standard-gray: #3F4447;
+    --standard-purple: #91639B;
+    --standard-radius: 27px;
+    --mobile-width: 390px;
 }
 
 body {
@@ -25,6 +27,22 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: var(--font-work-sans);
+}
+
+#media-level::before {
+    display: block;
+    content: "Desktop";
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+@media only screen and (max-width: 390px) {
+    #media-level::before {
+        content: "Mobile";
+    }
 }
 
 .fill-button {
@@ -121,13 +139,65 @@ body {
     padding: 20px;
 }
 
-#section-one .nav-row {
+#section-one .desktop-nav-row {
+    display: block;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     column-gap: 40px;
     font-size: 20px;
+}
+
+#section-one .desktop-nav-row a {
+    color: white;
+}
+
+#section-one .desktop-nav-row a:hover {
+    color: var(--standard-green);
+}
+
+#section-one .desktop-nav-row a:visited:hover {
+    color: white;
+}
+
+#section-one .desktop-nav-row a:visited {
+    color: var(--standard-purple);
+}
+
+#section-one .tablet-mobile-nav-row {
+    display: none;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    text-align: right;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    background: transparent;
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 #section-one .title {
@@ -142,7 +212,6 @@ body {
     padding: 42px;
     max-width: 358px;
     text-align: start;
-
 }
 
 #section-one .tag {
@@ -160,9 +229,30 @@ body {
 #section-one .button-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 745px) {
+    #media-level::before {
+        content: "Tablet";
+    }
+
+    #section-one .desktop-nav-row {
+        display: none;
+    }
+
+    #section-one .tablet-mobile-nav-row {
+        display: block;
+    }
+
+    #section-one .banner {
+        align-items: start;
+    }
+
+    #section-one .bottom-left {
+        bottom: 0px;
+    }
 }
 
 #section-two {
@@ -277,7 +367,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     column-gap: 40px;
 }
 
