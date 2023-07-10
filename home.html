@@ -85,7 +85,7 @@
                     <p>
                         We work with couples and individuals to support their growth and life goals.
                     </p>
-                    <a>
+                    <a href="#more">
                         Learn more
                     </a>
                 </div>
@@ -329,15 +329,18 @@
                 </div>
             </div>
             <div class="flex-item">
-                <div class="title">Sign up for our newsletter</div>
-                <div class="description">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, mauris sed semper
-                        ultricies, eros quam scelerisque mauris, id tincidunt lectus mauris nec
-                    </p>
-                </div>
-                <div class="description">EmailAddress@collectivecouple.com</div>
-                <button class="footer-fill-button">Subscribe</button>
+                <form action="javascript:" onsubmit="signup()">
+                    <div class="title">Sign up for our newsletter</div>
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, mauris sed
+                            semper
+                            ultricies, eros quam scelerisque mauris, id tincidunt lectus mauris nec
+                        </p>
+                    </div>
+                    <input #bloop type="email" placeholder="Email address" name="mail" required>
+                    <input type="submit" class="footer-fill-button" value="Subscribe">
+                </form>
             </div>
         </div>
     </div>
