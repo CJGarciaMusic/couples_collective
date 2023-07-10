@@ -27,6 +27,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: var(--font-work-sans);
+    width: 100vw;
 }
 
 #media-level::before {
@@ -48,8 +49,11 @@ body {
 .fill-button {
     white-space: nowrap;
     background-color: var(--standard-green);
-    border: none;
-    color: white;
+    border: solid 2px;
+    border-color: var(--standard-green);
+    color: black;
+    mix-blend-mode: exclusion;
+
     padding: 9px 26px;
     text-align: center;
     text-decoration: none;
@@ -58,6 +62,14 @@ body {
     font-size: 20px;
     font-weight: 500;
     border-radius: var(--standard-radius);
+    transition: 0.3s;
+}
+
+.fill-button:hover {
+    background-color: white;
+    color: var(--standard-green);
+    mix-blend-mode: normal;
+    transition-timing-function: ease-in-out;
 }
 
 .outline-button {
@@ -265,9 +277,8 @@ body {
 
 #section-two .flex-container {
     display: flex;
-    column-gap: 40px;
-    margin: 40px 20px;
-    justify-content: space-between;
+    padding: 40px;
+    justify-content: space-evenly;
 }
 
 #section-two .title {
@@ -285,7 +296,7 @@ body {
 
 #section-two img {
     display: block;
-    width: 25vw;
+    max-width: 25vw;
     height: auto;
     border-radius: var(--standard-radius);
 }
@@ -310,6 +321,8 @@ body {
 
 #section-three .cover-img {
     display: block;
+    width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     /* max-width: 75%; */
