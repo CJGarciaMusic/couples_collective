@@ -796,3 +796,113 @@ input {
 }
 
 /* ==================== MEET OUR TEAM PAGE ==================== */
+
+#team-one {
+    position: relative;
+    /* padding: 0 var(--standard-padding); */
+    /* background-color: #2D2D2D; */
+    /* width: 100%; */
+    /* height: 100%; */
+    top: 120px;
+}
+
+#team-one .tag-container {
+    text-align: left;
+    align-items: center;
+}
+
+#team-one .circle-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#team-one .first-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#team-one .second-column {
+    align-content: end;
+}
+
+#team-one .circle-one {
+    border-radius: 296px;
+    background: #EDEEF6;
+    width: 296px;
+    height: 296px;
+    margin-left: 104px;
+}
+
+#team-one .circle-two {
+    border-radius: 224px;
+    background: #EDEEF6;
+    width: 224px;
+    height: 224px;
+    margin-left: 40px;
+}
+
+#team-one .circle-three {
+    border-radius: 392px;
+    background: #EDEEF6;
+    width: 392px;
+    height: 392px;
+}
+
+#team-one #people {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 var(--standard-padding);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+#team-one .people-container {
+    flex-basis: calc(33.33% - 60px);
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+#team-one .people-heading {
+    display: flex;
+    align-items: center;
+
+    & .profile-container {
+        flex: 0 0 auto;
+        width: 127px;
+        height: 127px;
+        overflow: hidden;
+        border-radius: 50%;
+
+    }
+
+    & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & .text-content {
+
+        & .title {
+            font-size: 16px;
+            color: var(--standard-purple);
+        }
+
+        & .position {
+            font-size: 14px;
+            color: var(--standard-green);
+        }
+
+        & .services {
+            font-size: 12px;
+        }
+
+        & .blurb {
+            font-size: 14px;
+        }
+    }
+}

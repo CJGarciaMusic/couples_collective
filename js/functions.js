@@ -10,3 +10,61 @@ function myFunction() {
 function signup() {
     alert("bloop");
 }
+
+fetch('/assets/team_info.json')
+    .then(response => response.json())
+    .then(file => {
+        const people = document.getElementById('people');
+        file.forEach(data => {
+            // create container
+            const container = document.createElement('div');
+            container.className = "people-container";
+            people.appendChild(container);
+
+            // create heading
+            const heading = document.createElement('div');
+            heading.className = 'people-heading';
+            container.appendChild(heading);
+
+            // create image
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'profile-container';
+            heading.appendChild(imageContainer);
+
+            const image = document.createElement('img');
+            image.src = data.picture;
+            imageContainer.appendChild(image);
+
+            // create text content div
+            const textcontent = document.createElement('div');
+            textcontent.classList = 'text-content';
+            heading.appendChild(textcontent);
+
+            // create title
+            const title = document.createElement('div');
+            title.className = 'title';
+            title.innerText = data.name;
+            textcontent.appendChild(title);
+
+            // create position
+            const position = document.createElement('div');
+            position.className = 'position';
+            position.innerText = data.position;
+            textcontent.appendChild(position);
+
+            // create services
+            const services = document.createElement('div');
+            services.className = 'services';
+            services.innerText = data.services;
+            textcontent.appendChild(services);
+
+            // create blurb
+            const blurb = document.createElement('div');
+            blurb.className = 'blurb';
+            blurb.innerText = data.blurb;
+            container.appendChild(blurb);
+        });
+    })
+    .catch(error => {
+        console.error('Error loading text content:', error);
+    });
