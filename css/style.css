@@ -977,6 +977,7 @@ a:visited:hover {
 #team-two .container {
     display: flex;
     align-items: start;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #EAEEEC;
     padding: 60px var(--standard-padding);
@@ -993,19 +994,18 @@ a:visited:hover {
         max-width: 544px;
         width: 100%;
         flex: 1;
-        border-radius: var(--standard-padding);
+        border-radius: 7px;
     }
 
     & form {
         max-width: 540px;
+        min-width: 260px;
         width: 100%;
-        /* flex: 1; */
 
         & .time-row {
             display: flex;
             flex-direction: row;
             justify-content: end;
-            /* align-items: stretch; */
         }
 
     }
@@ -1047,4 +1047,16 @@ a:visited:hover {
         margin-bottom: 5px;
         /* Adjust the spacing between label and input */
     }
+}
+
+#team-three {
+    position: relative;
+}
+
+#team-three .call-now {
+    font-family: var(--font-work-sans-bold);
+    font-size: 24px;
+    color: #145174;
+    padding: 60px 0;
+    text-align: center;
 }
