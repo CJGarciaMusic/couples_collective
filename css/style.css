@@ -219,7 +219,7 @@ a:visited:hover {
     text-align: start;
 }
 
-#section-one .right-nav-desktop {
+.right-nav-desktop {
     display: block;
     display: flex;
     flex-direction: row;
@@ -239,11 +239,11 @@ a:visited:hover {
     }
 }
 
-#section-one .tablet-mobile-nav-row {
+.tablet-mobile-nav-row {
     display: none;
 }
 
-#section-one .topnav {
+.topnav {
     overflow: hidden;
     background-color: transparent;
     position: relative;
@@ -591,11 +591,11 @@ a:visited:hover {
         content: "Tablet";
     }
 
-    #section-one .right-nav-desktop {
+    .right-nav-desktop {
         display: none;
     }
 
-    #section-one .tablet-mobile-nav-row {
+    .tablet-mobile-nav-row {
         display: block;
     }
 
@@ -699,11 +699,11 @@ a:visited:hover {
         width: auto;
     }
 
-    #section-one .right-nav-desktop {
+    .right-nav-desktop {
         display: none;
     }
 
-    #section-one .tablet-mobile-nav-row {
+    .tablet-mobile-nav-row {
         display: block;
     }
 
@@ -797,7 +797,7 @@ a:visited:hover {
 
 /* ==================== MEET OUR TEAM PAGE ==================== */
 
-#team-navigation {
+#second-navigation {
     padding: 40px var(--standard-padding);
 
     & .container {
@@ -811,7 +811,7 @@ a:visited:hover {
         color: #333;
     }
 
-    & .right-nav-desktop {
+    /* & .right-nav-desktop {
         display: block;
         display: flex;
         flex-direction: row;
@@ -829,7 +829,7 @@ a:visited:hover {
         & a:visited {
             color: var(--standard-purple);
         }
-    }
+    } */
 }
 
 #team-one {
@@ -1059,4 +1059,40 @@ a:visited:hover {
     color: #145174;
     padding: 60px 0;
     text-align: center;
+}
+
+#faq-one {
+    padding: 60px var(--standard-padding);
+    max-width: 727px;
+
+    & .title {
+        font-family: var(--font-libre-serif);
+        font-size: 32px;
+        color: #2D2D2D;
+        margin: 20px 0;
+    }
+
+    & .subtitle {
+        font-family: var(--font-work-sans-regular);
+        font-size: 16px;
+        color: #4E4E4E;
+    }
+}
+
+#faq-two {
+    padding: 60px var(--standard-padding);
+    max-width: 727px;
+
+    & .question {
+        margin-top: 20px;
+        font-family: var(--font-libre-serif);
+        font-size: 20px;
+        color: #2D2D2D;
+    }
+
+    & .answer {
+        font-family: var(--font-work-sans-regular);
+        font-size: 16px;
+        color: #4E4E4E;
+    }
 }

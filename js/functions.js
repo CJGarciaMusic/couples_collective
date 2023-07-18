@@ -68,3 +68,25 @@ fetch('/assets/team_info.json')
     .catch(error => {
         console.error('Error loading text content:', error);
     });
+
+fetch('/assets/faq.json')
+    .then(response => response.json())
+    .then(file => {
+        const faq = document.getElementById('faq-two');
+        file.forEach(data => {
+            // create title
+            const question = document.createElement('div');
+            question.className = 'question';
+            question.innerText = data.q;
+            faq.appendChild(question);
+
+            // create position
+            const answer = document.createElement('p');
+            answer.className = 'answer';
+            answer.innerText = data.a;
+            faq.appendChild(answer);
+        });
+    })
+    .catch(error => {
+        console.error('Error loading text content:', error);
+    });
